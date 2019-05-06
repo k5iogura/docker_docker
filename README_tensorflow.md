@@ -61,7 +61,7 @@ or
 # git status
 # ./configure
 ```
-Answer All Default value but **without use CUDA is Yes**  
+Answer **with use CUDA is Yes only** other is default(N)  
 ```
 # export TF_NEED_CUDA="1"
 # bazel build -c opt \
