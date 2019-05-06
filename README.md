@@ -77,6 +77,7 @@ Install the CUDA 10.0 Samples?
 ```
 Maybe dont care about --fix-missing, try install twice.  
 CUDA Sample installation failed because no graphical library missing such as libGLU.so, libX11.so.  
+[Can't locate InstallUtils.pm in @INC](https://devtalk.nvidia.com/default/topic/983777/cuda-setup-and-installation/can-t-locate-installutils-pm-in-inc/)  
 
 ## Referrences  
 
