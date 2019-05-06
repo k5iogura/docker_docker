@@ -79,6 +79,11 @@ Maybe dont care about --fix-missing, try install twice.
 CUDA Sample installation failed because no graphical library missing such as libGLU.so, libX11.so.  
 [Can't locate InstallUtils.pm in @INC](https://devtalk.nvidia.com/default/topic/983777/cuda-setup-and-installation/can-t-locate-installutils-pm-in-inc/)  
 
+#### build tensorflow  
+```
+apt install -y wget
+```
+
 ## Referrences  
 
 [docker commands](https://qiita.com/curseoff/items/a9e64ad01d673abb6866)  
