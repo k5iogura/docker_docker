@@ -105,7 +105,39 @@ Mon May 6 14:30:03 UTC 2019 : === Output wheel file is in: /tmp/tensorflow_pkg
 
 # cp /tmp/tensorflow_pkg/tensorflow-1.13.1-cp27-cp27mu-linux_x86_64.whl ~
 # cd
-# pip install --no-cache-dir ~/tensorflow_pkg/tensorflow-1.13.1-cp27-cp27mu-linux_x86_64.whl
+# pip install --no-cache-dir tensorflow-1.13.1-cp27-cp27mu-linux_x86_64.whl
+...
+ERROR: markdown 3.1 has requirement setuptools>=36, but you'll have setuptools 20.7.0 which is incompatible.
+...
+Successfully installed absl-py-0.7.1 astor-0.7.1 backports.weakref-1.0.post1 futures-3.2.0 gast-0.2.2 grpcio-1.20.1 h5py-2.9.0 markdown-3.1 protobuf-3.7.1 tensorboard-1.13.1 tensorflow-1.13.1 tensorflow-estimator-1.13.0 termcolor-1.1.0 werkzeug-0.15.2
+```
+Ingore setuptools error for markdown.  
+
+#### Check installation of tensorflow built now  
+See [ImportError: cannot import name main](https://qiita.com/qiita_kuru/items/77ef98e8ae37049cc1de)  
+
+```
+# python --version
+Python 2.7.12
+
+# pip list | grep tensorflow
+tensorflow           1.13.1   
+tensorflow-estimator 1.13.0   
+
+# pip show tensorflow
+Name: tensorflow
+Version: 1.13.1
+Summary: TensorFlow is an open source machine learning framework for everyone.
+Home-page: https://www.tensorflow.org/
+Author: Google Inc.
+Author-email: opensource@google.com
+License: Apache 2.0
+Location: /usr/local/lib/python2.7/dist-packages
+Requires: astor, enum34, protobuf, keras-preprocessing, gast, six, tensorboard, wheel, absl-py, backports.weakref, termcolor, numpy, tensorflow-estimator, grpcio, mock, keras-applications
+Required-by: 
+
+# python -c "import tensorflow"
+#
 ```
 
 #### Referrences  
