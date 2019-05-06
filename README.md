@@ -23,6 +23,7 @@ $ docker run \
 Download cuda and cudnn from NVIDIA site.  
 On another terminal to copy NVIDIA files to docker container,  
 ```
+$ docker ps -a // To check CONTAINER name
 $ docker cp cuda_10.0.130_410.48_linux.run     $CONTAINER:/root/cuda_10.0.130_410.48_linux.run
 $ docker cp cudnn-10.0-linux-x64-v7.5.0.56.tgz $CONTAINER:/root/cudnn-10.0-linux-x64-v7.5.0.56.tgz
 ```
