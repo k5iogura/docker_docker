@@ -74,9 +74,34 @@ For a long long time, many processes over 14,000 about 4 ~ 6h.
 cafe time, nap time, lanch, cafe, nap, dinner, yown,,, wooo.  
 
 ```
+INFO: Analysed target //tensorflow/tools/pip_package:build_pip_package (1 packages loaded, 1013 targets configured).
+INFO: Found 1 target...
+Target //tensorflow/tools/pip_package:build_pip_package up-to-date:
+  bazel-bin/tensorflow/tools/pip_package/build_pip_package
 INFO: Elapsed time: 29502.439s, Critical Path: 470.42s, Remote (0.00% of the time): [queue: 0.00%, setup: 0.00%, process: 0.00%]
 INFO: 15139 processes: 15139 local.
 INFO: Build completed successfully
+```
+Make tensorflow whl file.  
+```
+# ./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+Mon May 6 14:28:50 UTC 2019 : === Preparing sources in dir: /tmp/tmp.vV8KMLXDo3
+~/tensorflow ~/tensorflow
+~/tensorflow
+Mon May 6 14:29:02 UTC 2019 : === Building wheel
+warning: no files found matching '*.pyd' under directory '*'
+warning: no files found matching '*.pd' under directory '*'
+warning: no files found matching '*.dll' under directory '*'
+warning: no files found matching '*.lib' under directory '*'
+warning: no files found matching '*.h' under directory 'tensorflow/include/tensorflow'
+warning: no files found matching '*' under directory 'tensorflow/include/Eigen'
+warning: no files found matching '*.h' under directory 'tensorflow/include/google'
+warning: no files found matching '*' under directory 'tensorflow/include/third_party'
+warning: no files found matching '*' under directory 'tensorflow/include/unsupported'
+Mon May 6 14:30:03 UTC 2019 : === Output wheel file is in: /tmp/tensorflow_pkg
+
+# find  /tmp -iname \*whl
+/tmp/tensorflow_pkg/tensorflow-1.13.1-cp27-cp27mu-linux_x86_64.whl
 ```
 
 #### Referrences  
