@@ -1,5 +1,14 @@
 # Build tensorflow with GPU without AVX  
 
+- TensorFlow 1.13.1 GPU
+- Ubuntu 16.04
+- Python 2.7
+- CUDA 10.0
+- CuDNN 7.5
+- NCCL 1.3
+- Bazel 0.19.2
+- cpuinfo Intel(R) Celeron(R) CPU G1820 @ 2.70GHz
+
 All of bellow procedure **On Dakcer ubuntu:16.04**.  
 
 #### Install bazel tool to build tensorflow  
