@@ -1,5 +1,16 @@
 # docker_docker
-[build tensorflow with GPU without AVX](README_tensorflow.md)  
+
+## Progress report  
+*What is this repo*  
+How to birng up docker with NVIDIA GPU.  
+
+*Strategy for using GPU on docker*  
+Uses Centos7.5 installed NVIDIA Driver, CUDA and cudnn.  
+Shares /dev/nvidia*, /usr/lib64/libnvidia*, /usr/lib64/libcu* /usr/bin/nvidia-smi on both HostOS and docker.  
+Uses ubuntu:16.04 image from docker.hub.  
+Installs CUDA and cudnn on docker container.  
+
+A next step is [build tensorflow with GPU without AVX](README_tensorflow.md)  
 
 ## On Host( Centos7.5 )  
 
