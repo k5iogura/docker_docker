@@ -69,6 +69,7 @@ Answer **Yes for the question of use CUDA ?** for all of other questions answer 
  //tensorflow/tools/pip_package:build_pip_package
 ```
 For a long long time, many processes over 14,000 about 4 ~ 6h.  
+cafe time, nap time, cafe, dinner, yown,,, wooo.  
 
 #### Referrences  
 [TF 1.12.0, CPU/GPU, CUDA 9.0, CuDNN 7.4, Python 3.5, Ubuntu 16.04, Skylake, -AVX, +SSE4](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/99)  
