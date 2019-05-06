@@ -87,7 +87,7 @@ CUDA Sample installation failed because no graphical library missing such as lib
 
 #### build tensorflow  
 
-[build tensorflow with GPU without AVX](REAME_tensorflow.md)  
+[build tensorflow with GPU without AVX](README_tensorflow.md)  
 
 ## Referrences  
 
