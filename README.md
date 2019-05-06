@@ -1,4 +1,5 @@
 # docker_docker
+[build tensorflow with GPU without AVX](REAME_tensorflow.md)  
 
 ## On Host( Centos7.5 )  
 
@@ -74,14 +75,19 @@ Install the CUDA 10.0 Samples?
 
 # cd /usr/local
 # tar xzf /root/cudnn-10.0-linux-x64-v7.5.0.56.tgz
+
+# add bellow in the end of .bashrc
+export PATH=$PATH:/usr/local/cuda-10.0/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.0/lib64
+export PKG_CONFIG_PATH=H=/usr/lib64/pkgconfig
 ```
 Maybe dont care about --fix-missing, try install twice.  
 CUDA Sample installation failed because no graphical library missing such as libGLU.so, libX11.so.  
 [Can't locate InstallUtils.pm in @INC](https://devtalk.nvidia.com/default/topic/983777/cuda-setup-and-installation/can-t-locate-installutils-pm-in-inc/)  
 
 #### build tensorflow  
-```
-```
+
+[build tensorflow with GPU without AVX](REAME_tensorflow.md)  
 
 ## Referrences  
 
