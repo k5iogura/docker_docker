@@ -16,6 +16,14 @@ Installs CUDA and cudnn on docker container.
 
 [docker install memo : on Raspbian, ubuntu, Centos](https://qiita.com/n-yamanaka/items/ddb18943f5e43ca5ac2e)  
 
+```
+# yum install -y yum-utils
+# yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+# yum install docker-ce
+# adduser $USER -G docker
+$ logout
+```
+
 - Attached  GPU GTX1050Ti  
 - Installed NVIDIA-Linux-x86_64-418.56.run  
 - Installed cuda_10.0.130_410.48_linux.run   
