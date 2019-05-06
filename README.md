@@ -78,4 +78,10 @@ Install the CUDA 10.0 Samples?
 Maybe dont care about --fix-missing, try install twice.  
 CUDA Sample installation failed because no graphical library missing such as libGLU.so, libX11.so.  
 
+## Referrences  
+
+[docker commands](https://qiita.com/curseoff/items/a9e64ad01d673abb6866)  
+[Tensorflow with NVIDIA GPU on Docker Container](http://memo.saitodev.com/home/tensorflow/nvidia_docker/)  
+[Build and run Docker containers leveraging NVIDIA GPUs](https://github.com/NVIDIA/nvidia-docker)  
+
 **06.May,2019**  
