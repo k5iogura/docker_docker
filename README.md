@@ -11,7 +11,7 @@
 - Installed cudnn-10.0-linux-x64-v7.5.0.56.tgz  
 
 Open two terminals  
-On first terminal, docker with NVIDIA driver files, See dockrun.sh.  
+On first terminal, docker with NVIDIA driver files. **Use dockrun.sh**.  
 ```
 $ docker run \
  --device /dev/nvidia0:/dev/nvidia0 \
