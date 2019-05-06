@@ -36,7 +36,7 @@ export PATH="$PATH:$HOME/bin"
 source /root/.bazel/bin/bazel-complete.bash
 ```
 
-#### Build tensorflow with CUDA  
+#### Build tensorflow whl file with CUDA to install tensorflow  
 Use **build_tensorflow.sh**  
 or  
 ```
