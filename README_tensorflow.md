@@ -1,4 +1,5 @@
 # Build tensorflow with GPU without AVX  
+# TF 1.13.1, CPU/GPU, CUDA 10.0, CuDNN 7.5, Python 2.7, Ubuntu 16.04, -AVX
 
 - TensorFlow 1.13.1 GPU
 - Ubuntu 16.04
