@@ -78,7 +78,7 @@ Install the CUDA 10.0 Samples?
 
 # add bellow in the end of .bashrc
 export PATH=$PATH:/usr/local/cuda-10.0/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.0/lib64
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.0/lib64:/usr/lib64
 export PKG_CONFIG_PATH=H=/usr/lib64/pkgconfig
 ```
 Maybe dont care about --fix-missing, try install twice.  
@@ -87,7 +87,7 @@ CUDA Sample installation failed because no graphical library missing such as lib
 
 #### build tensorflow  
 
-[build tensorflow with GPU without AVX](REAME_tensorflow.md)  
+[build tensorflow with GPU without AVX](README_tensorflow.md)  
 
 ## Referrences  
 
