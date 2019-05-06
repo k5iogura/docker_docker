@@ -35,3 +35,6 @@ Prepare,
 # apt install -y gcc vim vim-syntax-gtk ctags
 # sh cuda_10.0.130_410.48_linux.run
 ```
+Maybe try twice for --fix-missing.  
+
+**06.May,2019**  
