@@ -17,6 +17,6 @@ bazel version
 
 echo ##########################################Notice!!
 echo add path of bazel in your .bashrc.
-echo export PATH="$PATH:$HOME/bin"
+echo export PATH=\$PATH:\$HOME/bin
 echo source /root/.bazel/bin/bazel-complete.bash
 echo ##########################################
