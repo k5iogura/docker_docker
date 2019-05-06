@@ -84,5 +84,6 @@ CUDA Sample installation failed because no graphical library missing such as lib
 [docker commands](https://qiita.com/curseoff/items/a9e64ad01d673abb6866)  
 [Tensorflow with NVIDIA GPU on Docker Container](http://memo.saitodev.com/home/tensorflow/nvidia_docker/)  
 [Build and run Docker containers leveraging NVIDIA GPUs](https://github.com/NVIDIA/nvidia-docker)  
+[yaroslavvb/tensorflow-community-wheels](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/99)  
 
 **06.May,2019**  
