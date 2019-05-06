@@ -9,7 +9,7 @@
 - Bazel 0.19.2
 - cpuinfo Intel(R) Celeron(R) CPU G1820 @ 2.70GHz
 
-All of procedure bellow, execute **On Dakcer ubuntu:16.04**.  
+All of procedure bellow, execute **On Dokcer ubuntu:16.04**.  
 
 #### Install bazel tool to build tensorflow  
 Use install_bazel.sh  
