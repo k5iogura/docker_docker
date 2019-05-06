@@ -23,7 +23,9 @@ Installs CUDA and cudnn on docker container.
 # adduser $USER -G docker
 $ logout
 ```
+#### Host PC Status  
 
+- Intel(R) Celeron(R) CPU G1820 @ 2.70GHz
 - Attached  GPU GTX1050Ti  
 - Installed NVIDIA-Linux-x86_64-418.56.run  
 - Installed cuda_10.0.130_410.48_linux.run   
