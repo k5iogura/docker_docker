@@ -10,8 +10,6 @@ Shares /dev/nvidia*, /usr/lib64/libnvidia*, /usr/lib64/libcu* /usr/bin/nvidia-sm
 Uses ubuntu:16.04 image from docker.hub.  
 Installs CUDA and cudnn on docker container.  
 
-## >>Next>> [build tensorflow with GPU without AVX](README_tensorflow.md)  
-
 ## On Host( Centos7.5 )  
 
 [docker install memo : on Raspbian, ubuntu, Centos](https://qiita.com/n-yamanaka/items/ddb18943f5e43ca5ac2e)  
@@ -109,6 +107,39 @@ export PKG_CONFIG_PATH=H=/usr/lib64/pkgconfig
 Maybe dont care about --fix-missing, try install twice.  
 CUDA Sample installation failed because no graphical library missing such as libGLU.so, libX11.so.  
 [Can't locate InstallUtils.pm in @INC](https://devtalk.nvidia.com/default/topic/983777/cuda-setup-and-installation/can-t-locate-installutils-pm-in-inc/)  
+
+#### Check by darknet with CUDA and CuDNN  
+```
+# git clone https://github.com/pjreddie/darknet
+# cd darknet
+# vi Makefile
+    GPU   = 1
+    CUDNN = 1
+# make -j4
+# objdump -p darknet | grep lib
+  NEEDED               libm.so.6
+  NEEDED               libcuda.so.1
+  NEEDED               libcudart.so.10.0
+  NEEDED               libcublas.so.10.0
+  NEEDED               libcurand.so.10.0
+  NEEDED               libcudnn.so.7
+  NEEDED               libstdc++.so.6
+  NEEDED               libpthread.so.0
+  NEEDED               libc.so.6
+ ```
+ 
+ ```
+#  wget https://pjreddie.com/media/files/yolov2-voc.weights
+# ./darknet detect cfg/yolov2-voc.cfg yolov2-voc.weights data/dog.jpg
+CUDA Error: unknown error
+darknet: ./src/cuda.c:36: check_error: Assertion `0' failed.
+Aborted (core dumped)
+```
+
+Faild!  
+To use GPU on docker, you should use official docker such as nvidia-docker2.  
+
+# Under construction bellow!
 
 #### build tensorflow  
 
