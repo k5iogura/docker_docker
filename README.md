@@ -81,7 +81,7 @@ CUDA Sample installation failed because no graphical library missing such as lib
 
 #### build tensorflow  
 ```
-apt install -y wget
+apt install -y wget git curl
 ```
 
 ## Referrences  
