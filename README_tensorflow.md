@@ -45,6 +45,7 @@ or
 # apt -y install python3-dev python3-pip
 # apt -y install python-dev python-pip
 # apt -y install python-dev python-pip
+# pip install --upgrade pip enum34
 
 # pip install virtualenv virtualenvwrapper
 
@@ -70,7 +71,13 @@ Answer **Yes for the question of use CUDA ?** for all of other questions answer 
  //tensorflow/tools/pip_package:build_pip_package
 ```
 For a long long time, many processes over 14,000 about 4 ~ 6h.  
-cafe time, nap time, cafe, dinner, yown,,, wooo.  
+cafe time, nap time, lanch, cafe, nap, dinner, yown,,, wooo.  
+
+```
+INFO: Elapsed time: 29502.439s, Critical Path: 470.42s, Remote (0.00% of the time): [queue: 0.00%, setup: 0.00%, process: 0.00%]
+INFO: 15139 processes: 15139 local.
+INFO: Build completed successfully
+```
 
 #### Referrences  
 [TF 1.12.0, CPU/GPU, CUDA 9.0, CuDNN 7.4, Python 3.5, Ubuntu 16.04, Skylake, -AVX, +SSE4](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/99)  
