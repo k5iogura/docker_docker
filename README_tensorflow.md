@@ -60,7 +60,9 @@ or
 # git checkout v1.13.1
 # git status
 # ./configure
-
+```
+Answer All Default value but **without use CUDA is Yes**  
+```
 # export TF_NEED_CUDA="1"
 # bazel build -c opt \
  --config=cuda \
