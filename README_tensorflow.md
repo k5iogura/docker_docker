@@ -12,7 +12,7 @@
 All of procedure bellow, execute **On Dokcer ubuntu:16.04**.  
 
 #### Install bazel tool to build tensorflow  
-Use install_bazel.sh  
+Use **install_bazel.sh**  
 or  
 ```
 # apt-get -y install pkg-config zip g++ zlib1g-dev unzip python wget
@@ -37,7 +37,7 @@ source /root/.bazel/bin/bazel-complete.bash
 ```
 
 #### Build tensorflow with CUDA  
-Use build_tensorflow.sh  
+Use **build_tensorflow.sh**  
 or  
 ```
 # apt -y install python3-dev python3-pip
@@ -67,8 +67,8 @@ Answer All Default value but **without use CUDA is Yes**
 # bazel build -c opt \
  --config=cuda \
  //tensorflow/tools/pip_package:build_pip_package
-
 ```
+For a long long time, many processes over 14,000 about 4 ~ 6h.  
 
 #### Referrences  
 [TF 1.12.0, CPU/GPU, CUDA 9.0, CuDNN 7.4, Python 3.5, Ubuntu 16.04, Skylake, -AVX, +SSE4](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/99)  
