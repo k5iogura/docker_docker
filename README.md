@@ -10,7 +10,7 @@ Shares /dev/nvidia*, /usr/lib64/libnvidia*, /usr/lib64/libcu* /usr/bin/nvidia-sm
 Uses ubuntu:16.04 image from docker.hub.  
 Installs CUDA and cudnn on docker container.  
 
-## A next step is [build tensorflow with GPU without AVX](README_tensorflow.md)  
+## >>Next>> [build tensorflow with GPU without AVX](README_tensorflow.md)  
 
 ## On Host( Centos7.5 )  
 
