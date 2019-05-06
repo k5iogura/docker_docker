@@ -3,7 +3,7 @@
 
 ## On Host( Centos7.5 )  
 
-[docker install memo Raspbian, ubuntu, Centos](https://qiita.com/n-yamanaka/items/ddb18943f5e43ca5ac2e)  
+[docker install memo : on Raspbian, ubuntu, Centos](https://qiita.com/n-yamanaka/items/ddb18943f5e43ca5ac2e)  
 
 - Attached  GPU GTX1050Ti  
 - Installed NVIDIA-Linux-x86_64-418.56.run  
