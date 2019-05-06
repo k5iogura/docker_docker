@@ -102,6 +102,10 @@ Mon May 6 14:30:03 UTC 2019 : === Output wheel file is in: /tmp/tensorflow_pkg
 
 # find  /tmp -iname \*whl
 /tmp/tensorflow_pkg/tensorflow-1.13.1-cp27-cp27mu-linux_x86_64.whl
+
+# cp /tmp/tensorflow_pkg/tensorflow-1.13.1-cp27-cp27mu-linux_x86_64.whl ~
+# cd
+# pip install --no-cache-dir ~/tensorflow-1.12.0-cp35-cp35m-linux_x86_64.whl
 ```
 
 #### Referrences  
