@@ -26,12 +26,13 @@ $ logout
 #### Host PC Status  
 
 - Intel(R) Celeron(R) CPU G1820 @ 2.70GHz
-- Attached  GPU GTX1050Ti  
+- Attached  GPU GTX1050Ti 
+- docker version 18.09.5  
 - Installed NVIDIA-Linux-x86_64-418.56.run  
 - Installed cuda_10.0.130_410.48_linux.run   
 - Installed cudnn-10.0-linux-x64-v7.5.0.56.tgz  
 
-Open two terminals  
+#### Open two terminals  
 On first terminal, docker with NVIDIA driver files. **Use dockrun.sh**.  
 ```
 $ docker run \
