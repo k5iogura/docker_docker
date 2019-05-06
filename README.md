@@ -1,5 +1,5 @@
 # docker_docker
-[build tensorflow with GPU without AVX](REAME_tensorflow.md)  
+[build tensorflow with GPU without AVX](README_tensorflow.md)  
 
 ## On Host( Centos7.5 )  
 
