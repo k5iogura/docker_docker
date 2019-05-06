@@ -1,6 +1,6 @@
 # docker_docker
 
-## Progress report  
+## Abstruct  
 *What is this repo*  
 How to birng up docker with NVIDIA GPU.  
 
