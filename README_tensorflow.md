@@ -137,8 +137,26 @@ Requires: astor, enum34, protobuf, keras-preprocessing, gast, six, tensorboard, 
 Required-by: 
 
 # python -c "import tensorflow"
-#
+# 
 ```
+Check No.2  
+```
+# python
+  import tensorflow as tf
+  sess = tf.Session()
+2019-05-06 15:40:36.228361: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+2019-05-06 15:40:36.236067: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2693755000 Hz
+2019-05-06 15:40:36.236494: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x408e860 executing computations on platform Host. Devices:
+2019-05-06 15:40:36.236636: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-06 15:40:36.368418: E tensorflow/stream_executor/cuda/cuda_driver.cc:300] failed call to cuInit: CUDA_ERROR_UNKNOWN: unknown error
+2019-05-06 15:40:36.368509: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:161] retrieving CUDA diagnostic information for host: e10a262eff7f
+2019-05-06 15:40:36.368526: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:168] hostname: e10a262eff7f
+2019-05-06 15:40:36.368590: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:192] libcuda reported version is: Invalid argument: expected %d.%d, %d.%d.%d, or %d.%d.%d.%d form for driver version; got "1"
+2019-05-06 15:40:36.368642: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:196] kernel reported version is: 410.48.0
+```
+Faild!  
+Shock! ;-< 
+Gaveup
 
 #### Referrences  
 [TF 1.12.0, CPU/GPU, CUDA 9.0, CuDNN 7.4, Python 3.5, Ubuntu 16.04, Skylake, -AVX, +SSE4](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/99)  
