@@ -60,8 +60,7 @@ Mon May  6 01:13:10 2019
 
 #### Installing cuda 10, cudnn 7.5  
 ```
-# apt -y install libmodule-install-perl
-# apt install -y gcc vim vim-syntax-gtk ctags
+# apt -y install libmodule-install-perl gcc vim vim-syntax-gtk ctags wget git
 # sh /root/cuda_10.0.130_410.48_linux.run
 Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48?
 (y)es/(n)o/(q)uit: n
@@ -81,7 +80,6 @@ CUDA Sample installation failed because no graphical library missing such as lib
 
 #### build tensorflow  
 ```
-apt install -y wget git curl
 ```
 
 ## Referrences  
