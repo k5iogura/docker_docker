@@ -11,14 +11,15 @@
 - Installed cudnn-10.0-linux-x64-v7.5.0.56.tgz  
 
 Open two terminals  
-On first terminal, docker with NVIDIA driver files.  
+On first terminal, docker with NVIDIA driver files, See dockrun.sh.  
 ```
 $ docker run \
  --device /dev/nvidia0:/dev/nvidia0 \
  --device /dev/nvidiactl:/dev/nvidiactl \
  --device /dev/nvidia-modeset \
- -v /usr/lib64:/usr/lib64:ro \
  -v /usr/bin/nvidia-smi:/usr/bin/nvidia-smi:ro \
+ ...
+ ...
  -t -i --entrypoint=/bin/bash ubuntu:16.04
  #
 ```
