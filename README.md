@@ -31,6 +31,25 @@ $ logout
 - Installed NVIDIA-Linux-x86_64-418.56.run  
 - Installed cuda_10.0.130_410.48_linux.run   
 - Installed cudnn-10.0-linux-x64-v7.5.0.56.tgz  
+#### Docker Environment  
+
+- systemctl  
+```
+# systemctl start   docker
+# systemctl stop    docker
+# systemctl restart docker
+# systemctl status  docker
+```
+
+- proxy setting  
+```
+# mkdir /etc/systemd/system/docker.service.d
+# vim /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service]
+Environment="HTTP_PROXY=http://<user>:<pass>@<proxy_host>:<proxy_port>" "HTTPS_PROXY=http://<user>:<pass>@<proxy_host>:<proxy_port>" "NO_PROXY=localhost"
+$ systemctl daemon-reload
+$ systemctl restart docker
+```
 
 #### Open two terminals  
 On first terminal, docker with NVIDIA driver files. **Use dockrun.sh**.  
