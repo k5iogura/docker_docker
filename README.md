@@ -51,6 +51,12 @@ $ systemctl daemon-reload
 $ systemctl restart docker
 ```
 
+#### Install nvidia-docker  
+To run tensorflow with GPU,  
+```
+$ nvidia-docker run -it tensorflow/tensorflow:latest-gpu-py3 bash
+```
+
 #### Open two terminals  
 On first terminal, docker with NVIDIA driver files. **Use dockrun.sh**.  
 ```
