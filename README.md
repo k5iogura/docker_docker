@@ -56,7 +56,7 @@ To run tensorflow with GPU,
 ```
 $ nvidia-docker run -it tensorflow/tensorflow:latest-gpu-py3 bash
 ```
-[Ubuntu (GeForce)× Nvidia-docker2 で Keras(Tensorflow-gpu)](https://qiita.com/zentaro/items/d23e4cfd339d7040b5d7)  
+[Reference:Ubuntu (GeForce)× Nvidia-docker2 で Keras(Tensorflow-gpu)](https://qiita.com/zentaro/items/d23e4cfd339d7040b5d7)  
 
 #### Open two terminals  
 On first terminal, docker with NVIDIA driver files. **Use dockrun.sh**.  
