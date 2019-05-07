@@ -158,9 +158,34 @@ dog: 91%
 car: 87%
 bicycle: 81%
 ```
-Wao! 36.25ms/image, fast.  
+Wao! 36.25ms/image, prety fast.  
 
-# Under construction bellow!
+#### Check by tensorflow-gpu
+
+Reinstall tensorflow-gpu v1.13.1 to v1.5.0 because v1.13.1 has compiled with AVX instruction,  
+but ordinary CPU don't has AVX instruction.  
+
+```
+# pip uninstall tensorboard tensorflow-estimator tensorflow-gpu
+# pip install   tensorflow-gpu==1.5.0
+```
+
+```
+# python
+Python 3.5.2 (default, Nov 12 2018, 13:43:14) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+>>> s=tf.Session()
+2019-05-07 14:17:57.301045: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+2019-05-07 14:17:57.435476: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:895] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-05-07 14:17:57.436254: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1105] Found device 0 with properties: 
+name: GeForce GTX 1050 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.392
+pciBusID: 0000:01:00.0
+totalMemory: 3.94GiB freeMemory: 3.65GiB
+2019-05-07 14:17:57.436326: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1050 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+```
+Seems like Good!  
 
 #### build tensorflow  
 
