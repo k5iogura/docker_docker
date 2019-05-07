@@ -163,7 +163,8 @@ Wao! 36.25ms/image, prety fast.
 #### Check by tensorflow-gpu
 
 Reinstall tensorflow-gpu v1.13.1 to v1.5.0 because v1.13.1 has compiled with AVX instruction,  
-but ordinary CPU don't has AVX instruction.  
+but ordinary or older CPU don't have AVX instruction.  
+Wheel which has compiled with Intel new instructions such as AVX causes SEGV.  
 
 ```
 # pip uninstall tensorboard tensorflow-estimator tensorflow-gpu
@@ -187,7 +188,7 @@ totalMemory: 3.94GiB freeMemory: 3.65GiB
 ```
 Seems like Good!  
 
-#### build tensorflow  
+#### build tensorflow( It is unsuccess story but...)  
 
 [build tensorflow with GPU without AVX](README_tensorflow.md)  
 
