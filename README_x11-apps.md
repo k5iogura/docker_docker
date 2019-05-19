@@ -20,6 +20,9 @@ Can try xclock, xlogo , xedit etc.
 ```
 # echo $DISPLAY
 :0
+
+# ls /usr/local
+bin  cuda  cuda-10.0  etc  games  include  lib  man  sbin  share  src
 ```
 
 ### Run xterm
