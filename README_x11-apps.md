@@ -23,9 +23,16 @@ Can try xclock, xlogo , xedit etc.
 
 # ls /usr/local
 bin  cuda  cuda-10.0  etc  games  include  lib  man  sbin  share  src
+
+# ls /dev/*nvidia*
+/dev/nvidia-uvm  /dev/nvidia-uvm-tools  /dev/nvidia0  /dev/nvidiactl
+
+# ls /usr/bin/*nvidia*
+/usr/bin/nvidia-cuda-mps-control  /usr/bin/nvidia-cuda-mps-server  /usr/bin/nvidia-debugdump
+/usr/bin/nvidia-persistenced  /usr/bin/nvidia-smi
 ```
 
-### Run xterm
+### Let you run xterm
 ```
 # apt install -y xterm
 ```
