@@ -10,6 +10,8 @@ Shares /dev/nvidia*, /usr/lib64/libnvidia*, /usr/lib64/libcu* /usr/bin/nvidia-sm
 Uses ubuntu:16.04 image from docker.hub.  
 Installs CUDA and cudnn on docker container.  
 
+## [How to run xeyes on docker contrainer](./README_x11-apps.md)  
+
 ## On Host( Centos7.5 )  
 
 [docker install memo : on Raspbian, ubuntu, Centos](https://qiita.com/n-yamanaka/items/ddb18943f5e43ca5ac2e)  
