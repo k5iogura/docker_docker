@@ -8,7 +8,11 @@ Bellow shows how to run xeyes on docker contrainer with nvidia GPU support,
 
 ```
 # systemctl docker start // if needs 
-$ docker run --rm -it --runtime nvidia --net host -e DISPLAY=$DISPLAY tensorflow/tensorflow:latest-gpu-py3
+$ docker run --rm -it --runtime nvidia --net host -e DISPLAY=$DISPLAY tensorflow/tensorflow:latest-gpu-py3 // with GPU
+
+or
+
+$ docker run --rm -it --net host -e DISPLAY=$DISPLAY -v $HOME/.Xauthority:/root/.Xauthority ubuntu:16.04 bash
 
 # apt update && apt install -y x11-apps --fix-missing
 # xeyes
