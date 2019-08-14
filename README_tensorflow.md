@@ -1,10 +1,10 @@
 # tensorflow without Intel extenstion such as AVX and GPU support  
 
-### [Tensorflow Community binary](https://github.com/yaroslavvb/tensorflow-community-wheels/issues)  
+### Refer many binaries on [Tensorflow Community binary](https://github.com/yaroslavvb/tensorflow-community-wheels/issues)  
 
-### [Tensorflow 1.13.1, Ubuntu 16.04, Python 2.7, CPU-only, without AVX #105](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/105)  
+### Use whl of [Tensorflow 1.13.1, Ubuntu 16.04, Python 2.7, CPU-only, without AVX #105](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/105)  
 
-- Prerequestices  
+- Prerequisite
 Ubuntu16.04  
 numpy 1.16.0  
 python-pip  
@@ -20,8 +20,9 @@ python-pip
   tensorflow-estimator (1.13.0)
  #
 ```
+**Make sure that same version of tensorflow, tensorboard and tensorflow-estimator such as (1.13.x).**  
 
-- Check with same tensorflow tutorials version  
+- Check with **same tensorflow tutorials version**  
 
 ```
  $ git clone https://github.com/tensorflow/tensorflow
