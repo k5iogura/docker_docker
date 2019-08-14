@@ -13,6 +13,8 @@ Uses ubuntu:16.04 image from docker.hub.
 Installs CUDA and cudnn on docker container.  
 
 ## [How to run xeyes on docker contrainer](./README_x11-apps.md)  
+## [build tensorflow without AVX and GPU](README_tensorflow.md)  
+
 
 ## On Host( Centos7.5 )  
 
@@ -204,10 +206,6 @@ totalMemory: 3.94GiB freeMemory: 3.65GiB
 2019-05-07 14:17:57.436326: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1050 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
 ```
 Seems like Good!  
-
-#### build tensorflow( It is unsuccess story but...)  
-
-[build tensorflow with GPU without AVX](README_tensorflow.md)  
 
 ## Referrences  
 
