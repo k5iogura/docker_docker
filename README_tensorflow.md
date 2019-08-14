@@ -1,164 +1,40 @@
-# Build tensorflow with GPU without AVX  
-# TF 1.13.1, CPU/GPU, CUDA 10.0, CuDNN 7.5, Python 2.7, Ubuntu 16.04, -AVX
+# tensorflow without Intel extenstion such as AVX and GPU support  
 
-- TensorFlow 1.13.1 GPU
-- Ubuntu 16.04
-- Python 2.7
-- CUDA 10.0
-- CuDNN 7.5
-- NCCL 1.3
-- Bazel 0.19.2
-- cpuinfo Intel(R) Celeron(R) CPU G1820 @ 2.70GHz
+### [Tensorflow Community binary](https://github.com/yaroslavvb/tensorflow-community-wheels/issues)  
 
-All of procedure bellow, execute **On Dokcer ubuntu:16.04**.  
+### [Tensorflow 1.13.1, Ubuntu 16.04, Python 2.7, CPU-only, without AVX #105](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/105)  
 
-#### Install bazel tool to build tensorflow  
-Use **install_bazel.sh**  
-or  
-```
-# apt-get -y install pkg-config zip g++ zlib1g-dev unzip python wget
-# apt-get -y install pkg-config zip g++ zlib1g-dev unzip python wget
-# BAZEL_VERSION=0.19.2
-# BAZEL_INSTALLER=bazel-$BAZEL_VERSION-installer-linux-x86_64.sh
-# wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/${BAZEL_INSTALLER}
-# wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/${BAZEL_INSTALLER}.sha256
-# shasum -a 256 -c -b ${BAZEL_INSTALLER}.sha256 
-
-# chmod +x ${BAZEL_INSTALLER}
-# ./${BAZEL_INSTALLER} --user
-
-# export PATH="$PATH:$HOME/bin"
-# source /root/.bazel/bin/bazel-complete.bash
-
-# bazel version
-
-# add bellow in the end of .bashrc
-export PATH="$PATH:$HOME/bin"
-source /root/.bazel/bin/bazel-complete.bash
-```
-
-#### Build tensorflow whl file with CUDA to install tensorflow  
-Use **build_tensorflow.sh**  
-or  
-```
-# apt -y install python3-dev python3-pip
-# apt -y install python3-dev python3-pip
-# apt -y install python-dev python-pip
-# apt -y install python-dev python-pip
-# pip install --upgrade pip enum34
-
-# pip install virtualenv virtualenvwrapper
-
-# pip install -U six numpy wheel mock
-# pip install -U keras_applications==1.0.6 --no-deps
-# pip install -U keras_preprocessing==1.0.5 --no-deps
-# pip install -U scipy scikit-learn portpicker
-
-# apt -y install git wget
-# apt -y install git wget
-
-# git clone https://github.com/tensorflow/tensorflow.git
-# cd tensorflow/
-# git checkout v1.13.1
-# git status
-# ./configure
-```
-Answer **Yes for the question of use CUDA ?** for all of other questions answer default(N).  
-```
-# export TF_NEED_CUDA="1"
-# bazel build -c opt \
- --config=cuda \
- //tensorflow/tools/pip_package:build_pip_package
-```
-For a long long time, many processes over 14,000 about 4 ~ 6h.  
-cafe time, nap time, lanch, cafe, nap, dinner, yown,,, wooo.  
+- Prerequestices  
+Ubuntu16.04  
+numpy 1.16.0  
+python-pip  
 
 ```
-INFO: Analysed target //tensorflow/tools/pip_package:build_pip_package (1 packages loaded, 1013 targets configured).
-INFO: Found 1 target...
-Target //tensorflow/tools/pip_package:build_pip_package up-to-date:
-  bazel-bin/tensorflow/tools/pip_package/build_pip_package
-INFO: Elapsed time: 29502.439s, Critical Path: 470.42s, Remote (0.00% of the time): [queue: 0.00%, setup: 0.00%, process: 0.00%]
-INFO: 15139 processes: 15139 local.
-INFO: Build completed successfully
+ # pip install numpy=1.16.0    # because numpy==1.17.0 could be installed
+ # pip install https://github.com/maxhgerlach/tensorflow-1.13.1-ubuntu16.04-py27-no_avx-westmere/raw/master/tensorflow-1.13.1-cp27-cp27mu-linux_x86_64.whl
+ # python -c "import tensorflow"
+ #
+ # pip list | grep tensorflow
+  tensorboard (1.13.1)
+  tensorflow (1.13.1)
+  tensorflow-estimator (1.13.0)
+ #
 ```
-Make tensorflow whl file.  
-```
-# ./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
-Mon May 6 14:28:50 UTC 2019 : === Preparing sources in dir: /tmp/tmp.vV8KMLXDo3
-~/tensorflow ~/tensorflow
-~/tensorflow
-Mon May 6 14:29:02 UTC 2019 : === Building wheel
-warning: no files found matching '*.pyd' under directory '*'
-warning: no files found matching '*.pd' under directory '*'
-warning: no files found matching '*.dll' under directory '*'
-warning: no files found matching '*.lib' under directory '*'
-warning: no files found matching '*.h' under directory 'tensorflow/include/tensorflow'
-warning: no files found matching '*' under directory 'tensorflow/include/Eigen'
-warning: no files found matching '*.h' under directory 'tensorflow/include/google'
-warning: no files found matching '*' under directory 'tensorflow/include/third_party'
-warning: no files found matching '*' under directory 'tensorflow/include/unsupported'
-Mon May 6 14:30:03 UTC 2019 : === Output wheel file is in: /tmp/tensorflow_pkg
 
-# find  /tmp -iname \*whl
-/tmp/tensorflow_pkg/tensorflow-1.13.1-cp27-cp27mu-linux_x86_64.whl
-
-# cp /tmp/tensorflow_pkg/tensorflow-1.13.1-cp27-cp27mu-linux_x86_64.whl ~
-# cd
-# pip install --no-cache-dir tensorflow-1.13.1-cp27-cp27mu-linux_x86_64.whl
-...
-ERROR: markdown 3.1 has requirement setuptools>=36, but you'll have setuptools 20.7.0 which is incompatible.
-...
-Successfully installed absl-py-0.7.1 astor-0.7.1 backports.weakref-1.0.post1 futures-3.2.0 gast-0.2.2 grpcio-1.20.1 h5py-2.9.0 markdown-3.1 protobuf-3.7.1 tensorboard-1.13.1 tensorflow-1.13.1 tensorflow-estimator-1.13.0 termcolor-1.1.0 werkzeug-0.15.2
-```
-Ingore setuptools error for markdown.  
-
-#### Check installation of tensorflow built now  
-See [ImportError: cannot import name main](https://qiita.com/qiita_kuru/items/77ef98e8ae37049cc1de)  
+- Check with same tensorflow tutorials version  
 
 ```
-# python --version
-Python 2.7.12
-
-# pip list | grep tensorflow
-tensorflow           1.13.1   
-tensorflow-estimator 1.13.0   
-
-# pip show tensorflow
-Name: tensorflow
-Version: 1.13.1
-Summary: TensorFlow is an open source machine learning framework for everyone.
-Home-page: https://www.tensorflow.org/
-Author: Google Inc.
-Author-email: opensource@google.com
-License: Apache 2.0
-Location: /usr/local/lib/python2.7/dist-packages
-Requires: astor, enum34, protobuf, keras-preprocessing, gast, six, tensorboard, wheel, absl-py, backports.weakref, termcolor, numpy, tensorflow-estimator, grpcio, mock, keras-applications
-Required-by: 
-
-# python -c "import tensorflow"
-# 
+ $ git clone https://github.com/tensorflow/tensorflow
+ $ cd tensorflow/examples/tutorials/mnist
+ $ git checkout v1.13.0-rc0
+ $ python mnist_with_summaries.py
+  Accuracy at step 960: 0.9678
+  Accuracy at step 970: 0.9654
+  Accuracy at step 980: 0.9669
+  Accuracy at step 990: 0.9691
+  Adding run metadata for 999
+ $
 ```
-Check No.2  
-```
-# python
-  import tensorflow as tf
-  sess = tf.Session()
-2019-05-06 15:40:36.228361: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
-2019-05-06 15:40:36.236067: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2693755000 Hz
-2019-05-06 15:40:36.236494: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x408e860 executing computations on platform Host. Devices:
-2019-05-06 15:40:36.236636: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
-2019-05-06 15:40:36.368418: E tensorflow/stream_executor/cuda/cuda_driver.cc:300] failed call to cuInit: CUDA_ERROR_UNKNOWN: unknown error
-2019-05-06 15:40:36.368509: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:161] retrieving CUDA diagnostic information for host: e10a262eff7f
-2019-05-06 15:40:36.368526: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:168] hostname: e10a262eff7f
-2019-05-06 15:40:36.368590: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:192] libcuda reported version is: Invalid argument: expected %d.%d, %d.%d.%d, or %d.%d.%d.%d form for driver version; got "1"
-2019-05-06 15:40:36.368642: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:196] kernel reported version is: 410.48.0
-```
-Faild!  
-Shock! ;-< 
-Gaveup
-
-#### Referrences  
-[TF 1.12.0, CPU/GPU, CUDA 9.0, CuDNN 7.4, Python 3.5, Ubuntu 16.04, Skylake, -AVX, +SSE4](https://github.com/yaroslavvb/tensorflow-community-wheels/issues/99)  
-
-**06.May,2019**  
+ Worked fine!  
+ 
+**14.Aug,2019**  
