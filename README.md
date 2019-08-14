@@ -13,7 +13,7 @@ Uses ubuntu:16.04 image from docker.hub.
 Installs CUDA and cudnn on docker container.  
 
 ## [How to run xeyes on docker contrainer](./README_x11-apps.md)  
-## [build tensorflow without AVX and GPU](README_tensorflow.md)  
+## [Community binary for tensorflow without AVX and GPU](README_tensorflow.md)  
 
 
 ## On Host( Centos7.5 )  
