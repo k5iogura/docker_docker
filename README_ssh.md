@@ -42,7 +42,7 @@ done with container id.
  ```
  ready prompting!  
  
- ### To run GUI apps
+ ### To run GUI x11-apps via ssh connection
  Check host machine ip address,  
  ```
   $ ifconfig
@@ -63,12 +63,13 @@ done with container id.
  
  Set *DISPLAY* to virbr0 ipaddress and display No.  
  ```
+  $ ssh root@127.0.0.1 -p 10000
   $ export DISPLAY=192.168.122.1:0    # This is virbr0 ip address and displayNo.
 ``` 
 
 Test via x11-apps such as xeyes
 ```
-  $ xeyes
+ $ xeyes
 ```
 
  **Aug.13, 2019**  
