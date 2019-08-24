@@ -42,6 +42,35 @@ done with container id.
  ```
  ready prompting!  
  
+ ### To run GUI apps
+ Check host machine ip address,  
+ ```
+  $ ifconfig
+  docker0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+ ...
+  virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+ ...
+  wlp0s20u4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.11.7  netmask 255.255.255.0  broadcast 192.168.11.255
+ ```
+ 
+ Select *virbr0* virtual bridge connection socket and permit xhost client,    
+ ```
+  $ xhost +
+ ```
+ 
+ Set *DISPLAY* to virbr0 ipaddress and display No.  
+ ```
+  $ export DISPLAY=192.168.122.1:0    # This is virbr0 ip address and displayNo.
+``` 
+
+Test via x11-apps such as xeyes
+```
+  $ xeyes
+```
+
  **Aug.13, 2019**  
  
  
