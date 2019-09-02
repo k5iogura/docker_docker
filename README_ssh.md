@@ -28,7 +28,7 @@ CMD ["/usr/sbin/sshd", "-D"]
  $ docker image build . -t ssh_server
 ```
 
-### Make docker image without Dockerfile  
+### If dont use Dockerfile make docker image manually  
 ```
  $ docker run --rm -it --net host ubuntu:16.04 bash
  # apt install -y openssh-server vim
