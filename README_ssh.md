@@ -28,12 +28,15 @@ CMD ["/usr/sbin/sshd", "-D"]
  $ docker image build . -t ssh_server
 ```
 
-### If dont use Dockerfile make docker image manually  
+### If not work proxy...  
 ```
  $ docker run --rm -it --net host ubuntu:16.04 bash
+ # apt update
  # apt install -y openssh-server vim
  ctrl-p ctrl-q
- $ docker commit $(docker ps -a -q) ssh_server
+ $ docker commit $(docker ps -a -q) ssh_server_pure
+ $ cp Dockerfile_ssh_pure Dockerfile
+ $ docker image build . -t ssh_server
 ```
 
 ### Run docker container with port 10000  
